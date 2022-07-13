@@ -21,18 +21,34 @@ function Rectangulo() {
 function Circulo() {
     var radio;
     var circunferencia;
-    var cantidadc
+    var cantidadParaC;
+    var pi = Math.PI;
 
     radio = parseFloat(document.getElementById("txtIdRadio").value);
 
-    circunferencia = 2 * 3.14 * radio;
+    circunferencia = 2 * pi * radio;
 
-    cantidadc = circunferencia * 3;
+    cantidadParaC = circunferencia * 3;
 
-    alert("La cantidad de alambre a comprar es: " + cantidadc + " metros.");
+    alert("La cantidad de alambre a comprar es: " + cantidadParaC.toFixed(2) + " metros.");
 
 
 }
 function Materiales() {
+    var bolsaCemento;
+    var bolsaCal;
+    var metroCuadrado;
+    
+    largo = parseInt(document.getElementById("txtIdLargo").value);
+
+    ancho = parseInt(document.getElementById("txtIdAncho").value);
+
+    metroCuadrado = largo * ancho;
+
+    bolsaCal = metroCuadrado * 3;
+
+    bolsaCemento = metroCuadrado * 2;
+
+    alert("Para tu contrapiso se necesitan: "+bolsaCal+" bolsas de cal y "+bolsaCemento+" bolsas de cemento.");
 
 }

@@ -33,7 +33,7 @@ function Promedio() {
 
     promedio = resultado / 3;
 
-    alert("El promedio es: " + promedio);
+    alert("El promedio es: " + promedio.toFixed(2));
 }
 function PrecioFinal() {
     var IVA;

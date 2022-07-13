@@ -28,7 +28,7 @@ function CalcularPrecio() {
 
     else if (cantidadLamp == 5) {
 
-        if (document.getElementById("Marca").value == "ArgentinaLuz") {
+        if (marca == "ArgentinaLuz") {
             preciosind = cantidadLamp * precioLamp;
             descuento = preciosind * 40 / 100;
             preciofinal = (cantidadLamp * precioLamp) - descuento;
