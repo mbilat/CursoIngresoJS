@@ -23,127 +23,92 @@ function CalcularPrecio() {
 
     /*if (cantidadLamp >= 6) {
         preciofinal = (cantidadLamp * precioLamp) / 2;
-
     }
 
     else if (cantidadLamp == 5) {
 
-        if (marca == "ArgentinaLuz") {
-            preciosind = cantidadLamp * precioLamp;
+        if (marca == "ArgentinaLuz")
             descuento = preciosind * 40 / 100;
-            preciofinal = (cantidadLamp * precioLamp) - descuento;
-
         }
         else {
             descuento = preciosind = cantidadLamp * 30 / 100;
-            preciofinal = (cantidadLamp * precioLamp) - descuento;
         }
     }
     else if (cantidadLamp == 4) {
 
-        if (marca == "ArgentinaLuz" || marca == "FelipeLamparas") {
-            preciosind = cantidadLamp * precioLamp;
+        if (marca == "ArgentinaLuz" || marca == "FelipeLamparas")
             descuento = preciosind * 25 / 100;
-            preciofinal = (cantidadLamp * precioLamp) - descuento;
         }
-        else {
-            preciosind = cantidadLamp * precioLamp;
+        else
             descuento = preciosind * 20 / 100;
-            preciofinal = (cantidadLamp * precioLamp) - descuento;
-
         }
     }
     else if (cantidadLamp == 3) {
 
-        if (marca == "ArgentinaLuz") {
-            preciosind = cantidadLamp * precioLamp;
+        if (marca == "ArgentinaLuz")
             descuento = preciosind * 15 / 100;
-            preciofinal = (cantidadLamp * precioLamp) - descuento;
-
         }
 
-        else if (marca == "FelipeLamparas") {
-            preciosind = cantidadLamp * precioLamp;
+        else if (marca == "FelipeLamparas")
             descuento = preciosind * 10 / 100;
-            preciofinal = (cantidadLamp * precioLamp) - descuento;
-
         }
-        else {
-            preciosind = cantidadLamp * precioLamp;
+        else
             descuento = preciosind * 5 / 100;
-            preciofinal = (cantidadLamp * precioLamp) - descuento;
-
         }
-
     }
-
-
     else {
-        preciofinal = cantidadLamp * precioLamp;
+        descuento = 0;
     }
+    preciofinal = (cantidadLamp * precioLamp) - descuento;
+
     document.getElementById("txtIdprecioDescuento").value = preciofinal;
+
     if (preciofinal > 120) {
         impuesto = preciofinal * 10 / 100;
         alert("IIBB Usted pagó: " + impuesto + " .");
     }*/
 
     if (cantidadLamp >= 6) {
-        preciofinal = (cantidadLamp * precioLamp) / 2
+        descuento = (cantidadLamp * precioLamp) / 2
     }
-    else
-    {
+    else {
         switch (cantidadLamp) {
             case 5:
                 if (marca == "ArgentinaLuz") {
-                    preciosind = cantidadLamp * precioLamp;
                     descuento = preciosind * 40 / 100;
-                    preciofinal = (cantidadLamp * precioLamp) - descuento;
-
                 }
                 else {
                     descuento = preciosind = cantidadLamp * 30 / 100;
-                    preciofinal = (cantidadLamp * precioLamp) - descuento;
                 }
             case 4:
                 if (marca == "ArgentinaLuz" || marca == "FelipeLamparas") {
-                    preciosind = cantidadLamp * precioLamp;
                     descuento = preciosind * 25 / 100;
-                    preciofinal = (cantidadLamp * precioLamp) - descuento;
                 }
                 else {
-                    preciosind = cantidadLamp * precioLamp;
                     descuento = preciosind * 20 / 100;
-                    preciofinal = (cantidadLamp * precioLamp) - descuento;
-
                 }
             case 3:
                 if (marca == "ArgentinaLuz") {
-                    preciosind = cantidadLamp * precioLamp;
                     descuento = preciosind * 15 / 100;
-                    preciofinal = (cantidadLamp * precioLamp) - descuento;
-
                 }
 
                 else if (marca == "FelipeLamparas") {
-                    preciosind = cantidadLamp * precioLamp;
                     descuento = preciosind * 10 / 100;
-                    preciofinal = (cantidadLamp * precioLamp) - descuento;
-
                 }
                 else {
-                    preciosind = cantidadLamp * precioLamp;
                     descuento = preciosind * 5 / 100;
-                    preciofinal = (cantidadLamp * precioLamp) - descuento;
-
                 }
 
             default:
                 preciofinal = cantidadLamp * precioLamp;
+                descuento = 0;
                 break;
         }
     }
-    
+    preciofinal = (cantidadLamp * precioLamp) - descuento;
+
     document.getElementById("txtIdprecioDescuento").value = preciofinal;
+
     if (preciofinal > 120) {
         impuesto = preciofinal * 10 / 100;
         alert("Usted pagó: " + impuesto + " de IIBB.");
